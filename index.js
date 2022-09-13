@@ -1,4 +1,15 @@
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '855ea0d734mshbf36e3ce34a512fp105f93jsndd216aa16782',
+		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+	}
+};
 
+fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20', options)
+	.then(response => response.json())
+	.then(data => data.forEach(recipe => {renderRecipe(recipe)}))
+	.catch(err => console.error(err));
 
 //TOGGLE BELOW
 
@@ -17,7 +28,8 @@ const seasonsDiv = document.querySelector("#seasons")
 const produceLists = document.getElementsByClassName(".produce-list")
 const produceItems = Array.from(document.getElementsByTagName("li"))
 const formText = document.querySelector("#search-form-input")
-
+const formButton = document.querySelector("#search-form")
+const recipeDiv = document.getElementById("recipes")
 
 function handleClick(e){
     formText.value = e.target.textContent
@@ -32,3 +44,42 @@ produceItems.forEach(listItem => {
 
 
 
+
+
+function handleForm(){
+    formButton.addEventListener('submit', (e) => 
+    e.preventDefault)
+
+}
+
+function renderRecipe(recipe){
+    const recipeName = document.createElement("h4")
+    const recipeImageURL = document.createElement("h6")
+    const recipeDescription = document.createElement("h5")
+
+    recipeName.textContent = recipe.name
+    recipeImageURL.src = recipe.thumbnail_url
+    recipeDescription.textContent = recipe.description
+
+    const newRecipeCard = {
+        name: recipeName,
+        thumbnail_url: recipeImageURL,
+        description: recipeDescription
+    }
+
+    recipeDiv.append(newRecipeCard)
+
+    console.log(newRecipeCard)
+}
+
+renderRecipe()
+
+// RECIPE RETURNS
+
+// let newRecipe = ''
+
+// let newRecipeCard = {
+//     name: "",
+//     thumbnail_url: "",
+//     description: ""
+// }

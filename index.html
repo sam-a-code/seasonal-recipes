@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="style.css" >
         <script type="text/javascript" defer src="index.js"></script>
+        <script type="application/json" defer src="https://tasty.p.rapidapi.com/recipes/list"></script>
         <title>Farmers Market Seasonal Recipes</title>
     </head>
 
@@ -79,10 +80,8 @@
         <br>
         <br>
         
-        <form id="search-form">
-        </form>
-        <form action = "file:///Users/apple/Development/code/farmers-market-recipe-finder/index.html">
-            <p> Submit Produce Items:</p>
+        <form id="search-form" action = "https://tasty.p.rapidapi.com/recipes/list">
+            <label> Submit Produce Items:</label>
             <input type="text" name="produce-item" id="search-form-input"/>
             <input type="submit" value="search recipes"/>
         </form>
@@ -90,7 +89,7 @@
         <br>
 
         <div id="recipes">
-            <h2>Seasonal recipes based on your selection: TEST</h2>
+            <h2>Seasonal recipes based on your selection:</h2>
         </div>
     </body>
 </html>
