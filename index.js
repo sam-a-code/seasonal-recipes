@@ -6,10 +6,14 @@ const options = {
 	}
 };
 
-fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20', options)
-	.then(response => response.json())
-	.then(data => data.forEach(recipe => {renderRecipe(recipe)}))
-	.catch(err => console.error(err));
+// fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=${formText.value}`, options)
+// //fetch("https://tasty.p.rapidapi.com/recipes/list?from=0&size=3", options)
+// 	.then(response => response.json())
+//   .then(data => console.log(data))
+// 	//.then(data => data.forEach(recipe => {renderRecipe(recipe)}))
+// 	.catch(err => console.error(err));
+
+
 
 //TOGGLE BELOW
 
@@ -33,7 +37,15 @@ const recipeDiv = document.getElementById("recipes")
 
 function handleClick(e){
     formText.value = e.target.textContent
-    }
+     console.log(formText.value)
+
+     fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=${formText.value}`, options)
+    //fetch("https://tasty.p.rapidapi.com/recipes/list?from=0&size=3", options)
+	  .then(response => response.json())
+    .then(data => console.log(data))
+	  //.then(data => data.forEach(recipe => {renderRecipe(recipe)}))
+	  .catch(err => console.error(err));
+}
 
 
 produceItems.forEach(listItem => {
@@ -48,18 +60,17 @@ produceItems.forEach(listItem => {
 
 function handleForm(){
     formButton.addEventListener('submit', (e) => 
-    e.preventDefault)
-
+    e.preventDefault())
 }
 
-function renderRecipe(recipe){
+function renderRecipe(){
     const recipeName = document.createElement("h4")
     const recipeImageURL = document.createElement("h6")
     const recipeDescription = document.createElement("h5")
-
-    recipeName.textContent = recipe.name
-    recipeImageURL.src = recipe.thumbnail_url
-    recipeDescription.textContent = recipe.description
+//turned values into strings to test code, need to change back
+    recipeName.textContent = "recipe.name"
+    recipeImageURL.src = "recipe.thumbnail_url"
+    recipeDescription.textContent = "recipe.description"
 
     const newRecipeCard = {
         name: recipeName,
