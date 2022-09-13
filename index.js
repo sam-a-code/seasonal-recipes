@@ -10,31 +10,20 @@
 
 const seasonsDiv = document.querySelector("#seasons")
 const produceLists = document.getElementsByClassName(".produce-list")
-
-console.log(seasonsDiv)
-
-
-
-
-
 const produceItems = Array.from(document.getElementsByTagName("li"))
-const formText = document.querySelector("search-form")
+const formText = document.querySelector("#search-form-input")
 
-console.log(produceItems)
-console.log(seasonsDiv)
-console.log(produceLists)
 
 function handleClick(e){
-    formText.innerHTML = e.target.produceItems.value
+    formText.value = e.target.textContent
     }
 
 
 produceItems.forEach(listItem => {
-    listItem.addEventListener('click', handleClick(e))
+    listItem.addEventListener('click', (e) => 
+    handleClick(e))
 })
 
 
-
-handleClick()
 
 
