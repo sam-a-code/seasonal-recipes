@@ -1,0 +1,37 @@
+.season-heading, .produce-list {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#spring {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
+#summer {
+    grid-column: 2/ 4;
+    grid-row: 1;
+}
+
+#fall {
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+#winter {
+    grid-column: 4 / 4;
+    grid-row: 1;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
