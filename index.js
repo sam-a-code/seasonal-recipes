@@ -3,6 +3,15 @@
 //TOGGLE BELOW
 
 
+function handleToggle() {
+//seasons.toggleAttribute('hidden');
+console.log("toggle called")
+}
+
+const seasons = document.getElementsByName("h2");
+seasons.forEach((season) => {
+    season.addEventListener("toggle", handleToggle);
+});
 
 
 
