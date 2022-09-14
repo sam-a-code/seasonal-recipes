@@ -42,12 +42,13 @@ function handleForm() {
   formButton.addEventListener("submit", (e) => {
     e.preventDefault();
     getRecipes()
-      .then((recipes) => {
-        recipes.results.forEach((recipe) => {
-          renderRecipe(recipe);
-        });
-      })
-      .catch((err) => console.error(err));
+    .then((recipes) => {
+      recipes.results.forEach((recipe) => {
+        renderRecipe(recipe);
+      });
+    })
+    .catch((err) => console.error(err));
+    formText.value = ""    
   });
 }
 
