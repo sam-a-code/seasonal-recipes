@@ -8,8 +8,6 @@ const options = {
 
 const baseUrl = "https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=";
 
-//TOGGLE BELOW
-
 const seasons = document.querySelectorAll(".season");
 seasons.forEach((season) => {
   season.children[0].addEventListener("click", () => {
@@ -17,17 +15,17 @@ seasons.forEach((season) => {
   });
 });
 
-//CLICK EVENT
-
 const seasonsDiv = document.querySelector("#seasons");
 const produceLists = document.getElementsByClassName(".produce-list");
 const produceItems = Array.from(document.getElementsByTagName("li"));
 const formText = document.querySelector("#search-form-input");
 const formButton = document.querySelector("#search-form");
 const recipeDiv = document.getElementById("recipes");
+const returnedRecipes = document.getElementById("returned-recipes")
 
 function handleClick(e) {
   formText.value = e.target.textContent;
+  returnedRecipes.innerHTML = ""
 }
 
 produceItems.forEach((listItem) => {
@@ -73,21 +71,6 @@ function renderRecipe(recipe) {
     recipeImageURL.setAttribute('class', 'recipe-image')
     recipeLink.setAttribute('target', '_blank')
 
-    // newRecipeCard = {
-    //   name: recipeName,
-    //   thumbnail_url: recipeImageURL,
-    //   description: recipeDescription,
-    // }
 
-    //  newRecipeCard.textContent = {
-    //   recipeName,
-    //   recipeImageURL,
-    //   recipeDescription,
-    //   recipeLink
-    // }
-
-  recipeDiv.append(newRecipeCard);
-  console.log(recipeLink)
-//   recipeDiv.append(recipeName, recipeImageURL, recipeDescription, recipeLink);
-
+  returnedRecipes.append(newRecipeCard);
 }
