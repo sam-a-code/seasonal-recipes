@@ -59,7 +59,10 @@ function renderRecipe(recipe) {
   const recipeName = document.createElement("h4");
   const recipeImageURL = document.createElement("img");
   const recipeDescription = document.createElement("h5");
+  const recipeLink = document.createElement("a")
 
+  recipeLink.textContent = "Recipe link"
+  recipeLink.href = `tasty.co/recipe/${recipe.slug}`
   recipeName.textContent = recipe.name;
   recipeImageURL.src = recipe.thumbnail_url;
   recipeDescription.textContent = recipe.description;
@@ -70,5 +73,8 @@ function renderRecipe(recipe) {
   //     description: recipeDescription
   // }
 
-  recipeDiv.append(recipeName, recipeImageURL, recipeDescription);
+  recipeDiv.append(recipeName, recipeImageURL, recipeDescription, recipeLink);
+  console.log(recipeLink)
+//   recipeDiv.append(recipeName, recipeImageURL, recipeDescription, recipeLink);
+
 }
