@@ -5,6 +5,28 @@ h1 {
     margin: 3%
 }
 
+body {
+    background-color: #95cfb7;
+}
+
+#page-description {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: smaller;
+    font-weight: lighter;
+    margin: 2%
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-right: 5%;
+    margin-left: 5%;
+    background-image: url(https://images.unsplash.com/photo-1485637701894-09ad422f6de6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80);
+}
+
 .season-heading {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -12,16 +34,6 @@ h1 {
 .produce-list {
     font-family: 'Courier New', Courier, monospace;
     background-color: #e4f5ee;
-}
-
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    background-image: url(https://images.unsplash.com/photo-1485637701894-09ad422f6de6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80);
-
 }
 
 #spring {
@@ -76,17 +88,6 @@ h1 {
     opacity: 1;
 }
 
-body {
-    background-color: #95cfb7;
-}
-
-#recipes {
-    font-family: 'Courier New', Courier, monospace;
-    padding: 3%;
-    text-align: center;
-    background-image: url(https://images.unsplash.com/photo-1485637701894-09ad422f6de6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80); 
-}
-
 #search-form {
     font-family: 'Courier New', Courier, monospace;
     background-color: #e4f5ee;
@@ -95,8 +96,26 @@ body {
     text-align: center;
 }
 
+#search-form-input {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #submit-button {
     font-family: 'Courier New', Courier, monospace;
+}
+
+#recipe-header {
+    background-color: #e4f5ee;
+    padding: .5%
+}
+
+#recipes {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: center;
+    background-image: url(https://images.unsplash.com/photo-1485637701894-09ad422f6de6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80); 
 }
 
 .recipe-image {
@@ -108,21 +127,4 @@ body {
     padding: 5%;
     margin: 5%;
     text-align: center;
-}
-
-#search-form-input {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#page-description {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    font-size: smaller;
-    font-weight: lighter;
-    margin: 2%
-}
-
-#recipe-header {
-    background-color: #e4f5ee;
-    padding: .5%
 }
