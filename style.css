@@ -99,11 +99,11 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#recipe-image {
+.recipe-image {
     height: 200px;
 }
 
-#recipe-card {
+.recipe-card {
     background-color: #e4f5ee;
     padding: 5%;
     margin: 5%;
