@@ -66,11 +66,10 @@ function renderRecipe(recipe) {
   recipeImageURL.src = recipe.thumbnail_url;
   recipeDescription.textContent = recipe.description;
 
-    newRecipeCard.append(recipeName, recipeImageURL, recipeDescription, recipeLink)
-    newRecipeCard.setAttribute('class', 'recipe-card')
-    recipeImageURL.setAttribute('class', 'recipe-image')
-    recipeLink.setAttribute('target', '_blank')
-
+  newRecipeCard.append(recipeName, recipeImageURL, recipeDescription, recipeLink)
+  newRecipeCard.setAttribute('class', 'recipe-card')
+  recipeImageURL.setAttribute('class', 'recipe-image')
+  recipeLink.setAttribute('target', '_blank')
 
   returnedRecipes.append(newRecipeCard);
 }
