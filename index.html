@@ -9,6 +9,10 @@
 
     <body>
         <h1>Farmers Market Seasonal Recipes</h1>
+
+        <h4 id="page-description">Click a season name to toggle view ten seasonal produce items. <br>
+            Then, click one of those produce items to populate the search bar!</h4>
+
         <section id="seasons" class="wrapper">
             <div id="spring" class="season">
             <h2 class="season-heading">Spring</h2>
@@ -77,18 +81,19 @@
         </section>
 
         <br>
-        <br>
         
         <form id="search-form">
             <label>What can you make with what's in season?</label>
+            <br>
+            <br>
             <input type="text" name="produce-item" id="search-form-input"/>
             <input type="submit" id="submit-button" value="Find recipes"/>
         </form>
-        <br>
+        
         <br>
 
         <div id="recipes">
-            <h2>Seasonal recipes based on your selection:</h2>
+            <h2 id="recipe-header">Seasonal recipes based on your selection:</h2>
             <br>
             <br>
         </div>
