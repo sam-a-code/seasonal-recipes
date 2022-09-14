@@ -60,6 +60,7 @@ function renderRecipe(recipe) {
   const recipeImageURL = document.createElement("img");
   const recipeDescription = document.createElement("h5");
   const recipeLink = document.createElement("a")
+  const newRecipeCard = document.createElement("div")
 
   recipeLink.textContent = "Recipe link"
   recipeLink.href = `tasty.co/recipe/${recipe.slug}`
@@ -67,13 +68,24 @@ function renderRecipe(recipe) {
   recipeImageURL.src = recipe.thumbnail_url;
   recipeDescription.textContent = recipe.description;
 
-  // const newRecipeCard = {
-  //     name: recipeName,
-  //     thumbnail_url: recipeImageURL,
-  //     description: recipeDescription
-  // }
+    newRecipeCard.append(recipeName, recipeImageURL, recipeDescription, recipeLink)
+    newRecipeCard.setAttribute('id', 'recipe-card')
+    recipeImageURL.setAttribute('id', 'recipe-image')
 
-  recipeDiv.append(recipeName, recipeImageURL, recipeDescription, recipeLink);
+    // newRecipeCard = {
+    //   name: recipeName,
+    //   thumbnail_url: recipeImageURL,
+    //   description: recipeDescription,
+    // }
+
+    //  newRecipeCard.textContent = {
+    //   recipeName,
+    //   recipeImageURL,
+    //   recipeDescription,
+    //   recipeLink
+    // }
+
+  recipeDiv.append(newRecipeCard);
   console.log(recipeLink)
 //   recipeDiv.append(recipeName, recipeImageURL, recipeDescription, recipeLink);
 
