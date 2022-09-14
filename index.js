@@ -63,14 +63,15 @@ function renderRecipe(recipe) {
   const newRecipeCard = document.createElement("div")
 
   recipeLink.textContent = "Recipe link"
-  recipeLink.href = `tasty.co/recipe/${recipe.slug}`
+  recipeLink.href = `https://tasty.co/recipe/${recipe.slug}`
   recipeName.textContent = recipe.name;
   recipeImageURL.src = recipe.thumbnail_url;
   recipeDescription.textContent = recipe.description;
 
     newRecipeCard.append(recipeName, recipeImageURL, recipeDescription, recipeLink)
-    newRecipeCard.setAttribute('id', 'recipe-card')
-    recipeImageURL.setAttribute('id', 'recipe-image')
+    newRecipeCard.setAttribute('class', 'recipe-card')
+    recipeImageURL.setAttribute('class', 'recipe-image')
+    recipeLink.setAttribute('target', '_blank')
 
     // newRecipeCard = {
     //   name: recipeName,
