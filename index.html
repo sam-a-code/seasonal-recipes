@@ -9,7 +9,7 @@
 
     <body>
         <h1>Farmers Market Seasonal Recipes</h1>
-        <div id="seasons" class="wrapper">
+        <section id="seasons" class="wrapper">
             <div id="spring" class="season">
             <h2 class="season-heading">Spring</h2>
                 <ul class="produce-list" hidden>
@@ -74,21 +74,23 @@
                 </ul>
             </div>
 
-        </div>
+        </section>
 
         <br>
         <br>
         
         <form id="search-form">
-            <label> Submit Produce Items:</label>
+            <label>What can you make with what's in season?</label>
             <input type="text" name="produce-item" id="search-form-input"/>
-            <input type="submit" value="search recipes"/>
+            <input type="submit" id="submit-button" value="Find recipes"/>
         </form>
         <br>
         <br>
 
         <div id="recipes">
             <h2>Seasonal recipes based on your selection:</h2>
+            <br>
+            <br>
         </div>
     </body>
 </html>
