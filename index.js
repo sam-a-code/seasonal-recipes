@@ -8,12 +8,11 @@ const options = {
 
 const baseUrl = "https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=";
 
-
 //TOGGLE BELOW
 
 const seasons = document.querySelectorAll(".season");
 seasons.forEach((season) => {
-  season.addEventListener("click", (e) => {
+  season.children[0].addEventListener("click", () => {
     season.lastElementChild.toggleAttribute("hidden");
   });
 });
@@ -29,7 +28,6 @@ const recipeDiv = document.getElementById("recipes");
 
 function handleClick(e) {
   formText.value = e.target.textContent;
-  console.log(formText.value);
 }
 
 produceItems.forEach((listItem) => {
@@ -74,4 +72,3 @@ function renderRecipe(recipe) {
 
   recipeDiv.append(recipeName, recipeImageURL, recipeDescription);
 }
-
