@@ -1,10 +1,10 @@
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "855ea0d734mshbf36e3ce34a512fp105f93jsndd216aa16782",
-    "X-RapidAPI-Host": "tasty.p.rapidapi.com",
-  },
-};
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Key": "855ea0d734mshbf36e3ce34a512fp105f93jsndd216aa16782",
+//     "X-RapidAPI-Host": "tasty.p.rapidapi.com",
+//   },
+// };
 
 const baseUrl = "https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=";
 
@@ -68,6 +68,7 @@ function renderRecipe(recipe) {
   recipeDescription.textContent = recipe.description;
 
   newRecipeCard.append(recipeName, recipeImageURL, recipeDescription, recipeLink)
+
   newRecipeCard.setAttribute('class', 'recipe-card')
   recipeImageURL.setAttribute('class', 'recipe-image')
   recipeLink.setAttribute('target', '_blank')
