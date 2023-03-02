@@ -1,11 +1,11 @@
-# Farmers Marker Recipe Finder
+# 🥦 Farmers Marker Recipe Finder
 
 This project was the first project I created as part of my full stack software engineering bootcamp, working with two other team members to build this resource. The goal of this project is to help people find recipes inspired by produce that is seasonally and locally available.
 
 We also used an API to suggest recipes once users have selected a produce item. We did hide the API key so please reach out if you'd like access to it!
 
 
-## Using the recipe finder
+## 🧄 Using the recipe finder
 
 To get started, run the following command:
 #### `open index.html`
